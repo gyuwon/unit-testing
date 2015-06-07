@@ -9,10 +9,5 @@ namespace HelloWorld
         {
             InitializeComponent();
         }
-
-        private void GetMessageButton_Click(object sender, RoutedEventArgs e)
-        {
-            MessageTextBox.Text = "Hello World";
-        }
     }
 }
