@@ -6,12 +6,14 @@ namespace HelloWorld
 {
     public class MainViewModel : ViewModelBase
     {
+        private readonly HelloWorldServiceAgent _service;
         private string _messageText;
 
         public MainViewModel()
         {
+            _service = new HelloWorldServiceAgent();
             GetMessageCommand = new RelayCommand(
-                () => MessageText = "Hello World");
+                async () => MessageText = await _service.GetMessageAsync());
         }
 
         public string MessageText
