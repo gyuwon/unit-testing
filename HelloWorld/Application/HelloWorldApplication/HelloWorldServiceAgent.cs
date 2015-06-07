@@ -6,7 +6,7 @@ namespace HelloWorld
 {
     public class HelloWorldServiceAgent
     {
-        public async Task<string> GetMessageAsync()
+        public virtual async Task<string> GetMessageAsync()
         {
             var httpClient = new HttpClient();
             var uri = "http://localhost:9000/api/message";

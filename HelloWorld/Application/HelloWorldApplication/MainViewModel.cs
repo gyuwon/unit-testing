@@ -10,8 +10,13 @@ namespace HelloWorld
         private string _messageText;
 
         public MainViewModel()
+            : this(new HelloWorldServiceAgent())
         {
-            _service = new HelloWorldServiceAgent();
+        }
+
+        public MainViewModel(HelloWorldServiceAgent service)
+        {
+            _service = service;
             GetMessageCommand = new RelayCommand(
                 async () => MessageText = await _service.GetMessageAsync());
         }
