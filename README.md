@@ -1,1 +1,1 @@
-# AutoFixture 세미나(6/10/2015) '단위 테스트' 세션 데모 코드
+# Unit Testing 세미나 데모 코드
